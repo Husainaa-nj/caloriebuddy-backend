@@ -1,0 +1,15 @@
+[modules]
+retrieval = true  # Enable retrieval functionality
+
+[retrieval]
+model = "gpt-3.5-turbo"  # Add model for completion
+embeddings_model = "text-embedding-ada-002"  # Specify embeddings model
+max_tokens = 4000  # Maximum tokens for context window
+max_documents = 3  # Number of documents to retrieve
+chunk_size = 1000  # Add chunk size for text splitting
+chunk_overlap = 200  # Add overlap between chunks
+
+[vector_store]
+type = "local"  # Type of vector store to use
+path = "data/vector_store"  # Path to store vectors
+similarity_k = 3  # Number of similar documents to retrieve
